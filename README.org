@@ -1,0 +1,3 @@
+#+TITLE: org-zk
+
+This repository provides an extension to emacs [[https://orgmode.org][org-mode]] implementing a so-called [[https://zettelkasten.de/][Zettelkasten]].
