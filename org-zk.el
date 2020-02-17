@@ -22,7 +22,15 @@
 ;; Append a Zettelkasten capture for org-capture
 (when org-zk-append-capture
   (setq org-capture-templates
-        (append org-capture-templates
-          '(("Z" "Zettel [Note]" plain
-           (function org-zk-visit-timestamped-file)
-           "#+TITLE: %?\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n %?")))))
+    (append org-capture-templates
+            '(
+              ("Z" "Zettel [Note]" plain
+               (function org-zk-visit-timestamped-file)
+               "#+TITLE: %^{TITLE}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n\n %?")
+              ("P" "Paper [Zettelkasten]" plain
+               (function org-zk-visit-timestamped-file)
+               "#TITLE: %^{Title}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n#+PROPERTY: Authors : %^{Authors}\n#+TAGS:\n\n%?* General Information\n** Category\n** Context\n** Correctness\n** Contributions\n** Clarity")
+              )
+          )
+        )
+  )
