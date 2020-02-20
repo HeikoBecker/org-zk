@@ -30,7 +30,10 @@
               ("P" "Paper [Zettelkasten]" plain
                (function org-zk-visit-timestamped-file)
                "#TITLE: %^{Title}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n\
-#+PROPERTY: BIBKEY: %^{bibtexkey}\n\
+#+PROPERTY: BIBKEY %^{bibtexkey}\n\
 #+TAGS:\n\n\
-%?* General Information\n** Category\n** Context\n** Correctness\n** Contributions\n** Clarity")
+%?* General Information\n\
+** Category\n\
+** Context (Related work and theoretical bases)\n\
+** Correctness\n** Contributions\n** Clarity")
               ))))
