@@ -29,8 +29,8 @@
                "#+TITLE: %^{TITLE}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n\n %?")
               ("P" "Paper [Zettelkasten]" plain
                (function org-zk-visit-timestamped-file)
-               "#TITLE: %^{Title}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n#+PROPERTY: Authors : %^{Authors}\n#+TAGS:\n\n%?* General Information\n** Category\n** Context\n** Correctness\n** Contributions\n** Clarity")
-              )
-          )
-        )
-  )
+               "#TITLE: %^{Title}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n\
+#+PROPERTY: BIBKEY: %^{bibtexkey}\n\
+#+TAGS:\n\n\
+%?* General Information\n** Category\n** Context\n** Correctness\n** Contributions\n** Clarity")
+              ))))
