@@ -10,7 +10,11 @@
   (setq new-zettel--name (read-string "Title:"))
   (let* (
         (curr-date-stamp (format-time-string "%Y%m%d-%H%M"))
-        (safe-file-name (replace-regexp-in-string " " "-" new-zettel--name))
+        (safe-file-name
+         ;; escape some characters
+         (replace-regexp-in-string ":" ""
+         (replace-regexp-in-string "'" ""
+         (replace-regexp-in-string " " "-" new-zettel--name))))
         (file-string (format "%s-%s.org" curr-date-stamp safe-file-name))
         (file-name (expand-file-name file-string org-zk-dir)))
   (set-buffer (org-capture-target-buffer file-name))
