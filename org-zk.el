@@ -64,5 +64,5 @@
                (function get-org-zk-plain-template))
                ;;"#+TITLE: %^{TITLE}\n#+PROPERTY: Timestamp %<%Y%m%d_%H%M>\n\n %?")
               ("P" "Paper [Zettelkasten]" plain
-               (function org-zk-visit-timestamped-file)
+               (function org-zk-visit-timestamped-file-with-title)
                (function get-org-zk-paper-template))))))
